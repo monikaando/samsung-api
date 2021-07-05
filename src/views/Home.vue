@@ -1,18 +1,36 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>Samsung products</h1>
+    <div v-for="(item, index) in allProducts" :key="index">
+      <p>{{ item.fmyMarketingName }}</p>
+    </div>
+    <Product />
+    <Footer />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Product from "@/components/Product.vue";
+import Footer from "@/components/Footer.vue";
+
+import { mapGetters, mapActions } from "vuex";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    HelloWorld
-  }
-}
+    Product,
+    Footer,
+  },
+  created() {
+    this.getAllProducts();
+  },
+  computed: {
+    ...mapGetters(["allProducts"]),
+  },
+  methods: {
+    ...mapActions({
+      getAllProducts: "getAllProducts",
+    }),
+  },
+};
 </script>
