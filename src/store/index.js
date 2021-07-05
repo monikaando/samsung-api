@@ -16,9 +16,9 @@ export default new Vuex.Store({
 		loading: (state) => state.loading,
 	},
 	mutations: {
-		GET_ALL_PRODUCTS(state) {
+		async GET_ALL_PRODUCTS(state) {
 			state.loading = true;
-			fetch(url)
+			await fetch(url)
 				.then((response) => {
 					return response.json();
 				})
