@@ -1,7 +1,7 @@
 <template>
   <div v-if="allProducts && allProducts.length" class="products">
     <div v-for="(item, index) in allProducts" :key="index" class="item">
-      <h3 class="family-name">{{ item.fmyMarketingName }}</h3>
+      <h4 class="family-name">{{ item.fmyMarketingName }}</h4>
     </div>
   </div>
   <div v-else>Loading...</div>
@@ -36,11 +36,20 @@ img {
 .products {
   display: flex;
   flex-direction: column;
-  flex-flow: wrap;
-  justify-content: space-between;
-  background: rgba(252, 252, 252, 0.795);
+  background: #bbbaba8c;
+  height: 100vh;
+  width: 37vw;
+  padding-top: 1rem;
+  border-radius: 0 1rem 1rem 0;
+  box-shadow: 5px 0 5px rgba(218, 218, 218, 0.795);
 }
 .item {
-  margin: 3rem 1rem;
+  padding: 1rem;
+  width: 15rem;
+}
+.item:hover {
+  background-color: rgba(175, 175, 175, 0.801);
+  overflow: hidden;
+  border-radius: 0 0.4rem 0.4rem 0;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="allProducts && allProducts.length" class="products">
+  <div v-if="allProducts && allProducts.length" class="product-details">
     <div v-for="(item, index) in allProducts" :key="index" class="item">
       <h3 class="family-name">{{ item.fmyMarketingName }}</h3>
       <div v-for="(model, index) in item.modelList" :key="index">
@@ -23,6 +23,11 @@ export default {
   },
 };
 </script>
-
-<style>
+<style scoped>
+.product-details {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+}
 </style>

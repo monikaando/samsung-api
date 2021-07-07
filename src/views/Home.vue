@@ -2,7 +2,7 @@
   <div class="home">
     <div class="products">
       <Products />
-      <Product />
+      <ProductDetails />
     </div>
     <Footer />
   </div>
@@ -10,14 +10,14 @@
 
 <script>
 import Products from "@/components/Products.vue";
-import Product from "@/components/Product.vue";
+import ProductDetails from "@/components/ProductDetails.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {
   name: "Home",
   components: {
     Products,
-    Product,
+    ProductDetails,
     Footer,
   },
 };
@@ -29,6 +29,7 @@ export default {
 }
 .products {
   display: flex;
-  width: 60vw;
+  justify-content: start;
+  align-items: flex-start;
 }
 </style>

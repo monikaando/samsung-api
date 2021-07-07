@@ -7,16 +7,16 @@
 <style>
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #21293a;
-  color: rgb(226, 226, 226);
+  font-weight: 400;
+  background-color: #f7f7f7;
+  color: rgb(61, 61, 61);
   margin: 0;
   display: flex;
-  padding-top: 2rem;
 }
 a {
-  color: white;
+  color: #040b6c;
 }
 a:hover {
-  color: white;
+  color: #be4903;
 }
 </style>
