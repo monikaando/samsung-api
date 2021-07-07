@@ -1,10 +1,10 @@
 <template>
   <div>
     <p v-if="chip.fmyChipType === 'COLOR'">
-      Colors: {{ chip.fmyChipLocalName }}
+      Kleurs: {{ chip.fmyChipLocalName }}
     </p>
     <p v-if="chip.fmyChipType === 'MOBILE MEMORY'">
-      Memory: {{ chip.fmyChipLocalName }}
+      Totale opslagcapaciteit: {{ chip.fmyChipLocalName }}
     </p>
   </div>
 </template>
