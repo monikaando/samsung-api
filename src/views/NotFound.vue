@@ -1,7 +1,7 @@
 <template>
   <div class="error-page">
     <img
-      src="https://res.cloudinary.com/mokaweb/image/upload/v1625491081/SamsungProducts/404page.png"
+      src="https://res.cloudinary.com/mokaweb/image/upload/v1625677404/SamsungProducts/404-Error.png"
       alt="error-page"
     />
     <button @click="$router.push({ name: 'Home' })">
@@ -26,7 +26,7 @@ export default {
   background-color: white;
 }
 img {
-  width: 60rem;
+  width: 40rem;
 }
 button {
   padding: 0.25rem 1rem;
@@ -34,16 +34,16 @@ button {
   font-size: 16px;
   font-weight: 500;
   border-radius: 6px;
-  border: 1px solid #cc545a;
+  border: 1px solid #06b4fd;
   margin-left: 0.5rem;
   height: 45px;
-  background-color: #cc545a;
+  background-color: #06b4fd;
   color: white;
 }
 button:hover {
   color: white;
-  background-color: #f06f76;
-  border: 1px solid #f06f76;
+  background-color: #535353;
+  border: 1px solid #535353;
   cursor: pointer;
 }
 @media only screen and (max-width: 576px) {
