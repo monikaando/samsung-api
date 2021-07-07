@@ -11,7 +11,6 @@ body {
   color: rgb(226, 226, 226);
   margin: 0;
   display: flex;
-  justify-content: center;
   padding-top: 2rem;
 }
 a {
