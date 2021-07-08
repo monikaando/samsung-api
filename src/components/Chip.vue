@@ -1,11 +1,11 @@
 <template>
   <div>
     <p v-if="chip.fmyChipType === 'COLOR'">
-      Kleurs: {{ chip.fmyChipLocalName }}
+      <strong> Color: </strong>{{ chip.fmyChipLocalName }}
     </p>
-    <p v-if="chip.fmyChipType === 'MOBILE MEMORY'">
-      Totale opslagcapaciteit: {{ chip.fmyChipLocalName }}
-    </p>
+    <button v-if="chip.fmyChipType === 'MOBILE MEMORY'">
+      {{ chip.fmyChipLocalName }}
+    </button>
   </div>
 </template>
 
@@ -15,6 +15,3 @@ export default {
   props: ["chip"],
 };
 </script>
-
-<style>
-</style>

@@ -2,7 +2,7 @@
   <div class="home">
     <div class="products">
       <Products />
-      <ProductDetails />
+      <ProductDetails class="details" />
     </div>
     <Footer />
   </div>
@@ -29,7 +29,8 @@ export default {
 }
 .products {
   display: flex;
-  justify-content: start;
-  align-items: flex-start;
+}
+.details {
+  flex-grow: 1;
 }
 </style>

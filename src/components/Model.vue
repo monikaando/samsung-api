@@ -1,28 +1,25 @@
 <template>
   <div class="model">
-    <img :src="model.thumbUrl" :alt="model.thumbUrlAlt" />
+    <img :src="model.thumbUrl" :alt="model.thumbUrlAlt" class="thumburl" />
     <div class="model-text">
       <p v-if="model.promotionPriceDisplay">
         <strong>{{ model.promotionPriceDisplay }} €</strong>
       </p>
       <p v-else><strong>Unknown</strong></p>
-      <p>Model: {{ model.modelName }}</p>
-      <p>Ratings: {{ model.ratings }}</p>
+      <p class="model-name"><strong> Model: </strong> {{ model.modelName }}</p>
       <div v-for="(chip, index) in model.fmyChipList" :key="index">
         <Chip :chip="chip" />
       </div>
-      <div>
-        Details:
-        <div v-for="(details, index) in model.usp" :key="index">
+      <p class="details"><strong> Details:</strong></p>
+      <ul>
+        <li v-for="(details, index) in model.usp" :key="index">
           {{ details }}
-        </div>
-      </div>
-      <div>
+        </li>
+      </ul>
+      <div class="links">
         <a :href="'https://www.samsung.com/' + model.reviewUrl" target="_blank"
           >Read reviews</a
         >
-      </div>
-      <div>
         <a
           :href="'https://www.samsung.com/' + model.originPdpUrl"
           target="_blank"
@@ -47,9 +44,28 @@ export default {
 
 <style scoped>
 .model {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 .model-text {
   padding-left: 1.3rem;
+}
+.model-na {
+  margin-top: 2rem;
+}
+.details {
+  margin-top: 2rem;
+}
+ul {
+  padding-left: 1.2rem;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+}
+.links a {
+  padding-top: 1rem;
+}
+.thumburl {
+  padding: 0 1rem;
 }
 </style>
