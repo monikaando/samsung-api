@@ -1,5 +1,5 @@
 <template>
-  <div v-if="clickedProduct && clickedProduct.length" class="products">
+  <div v-if="clickedProduct && clickedProduct.length" class="product-details">
     <div v-for="(item, index) in clickedProduct" :key="index" class="item">
       <Model :model="item" />
     </div>
@@ -21,10 +21,15 @@ export default {
 };
 </script>
 <style scoped>
-.products {
+.product-details {
   display: flex;
   flex-flow: wrap;
-  justify-content: space-between;
-  width: 40vw;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.item {
+  background-color: white;
+  margin: 1.3rem;
+  border-radius: 1rem;
 }
 </style>

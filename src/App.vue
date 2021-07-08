@@ -11,7 +11,6 @@ body {
   background-color: #f7f7f7;
   color: rgb(61, 61, 61);
   margin: 0;
-  display: flex;
 }
 a {
   color: #040b6c;

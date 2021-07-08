@@ -1,9 +1,9 @@
 <template>
   <div v-if="allProducts && allProducts.length" class="products">
     <div v-for="(item, index) in allProducts" :key="index" class="item">
-      <h4 class="family-name" @click="getProduct(index)">
+      <h5 class="family-name" @click="getProduct(index)">
         {{ item.fmyMarketingName }}
-      </h4>
+      </h5>
     </div>
   </div>
   <div v-else>Loading...</div>
@@ -29,30 +29,29 @@ export default {
 };
 </script>
 <style scoped>
-img {
-  width: 5rem;
-  height: 5rem;
-}
-.family-name {
-  color: #0a0a0a;
-}
 .products {
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: column;
+  justify-items: center;
   background: #bbbaba8c;
-  height: 100vh;
   width: fit-content;
+  height: 98vh;
   padding-top: 1rem;
   border-radius: 0 1rem 1rem 0;
   box-shadow: 5px 0 5px rgba(218, 218, 218, 0.795);
 }
 .item {
   padding: 1rem;
-  width: 15rem;
+  width: 12rem;
 }
 .item:hover {
-  background-color: rgba(175, 175, 175, 0.801);
-  overflow: hidden;
+  background-color: rgba(151, 151, 151, 0.563);
   border-radius: 0 0.4rem 0.4rem 0;
+  width: 12rem;
+}
+.family-name {
+  color: #0a0a0a;
 }
 </style>
