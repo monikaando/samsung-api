@@ -6,7 +6,12 @@
       </h5>
     </div>
   </div>
-  <div v-else>Loading...</div>
+  <div v-else class="spinner">
+    <img
+      src="https://res.cloudinary.com/mokaweb/image/upload/v1625777151/SamsungProducts/loading.gif"
+      alt="loading"
+    />
+  </div>
 </template>
 
 <script>
@@ -53,5 +58,12 @@ export default {
 }
 .family-name {
   color: #0a0a0a;
+}
+.spinner {
+  display: flex;
+  margin: 22% auto;
+}
+.spinner img {
+  width: 2rem;
 }
 </style>
