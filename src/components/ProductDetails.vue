@@ -1,10 +1,7 @@
 <template>
-  <div v-if="allProducts && allProducts.length" class="product-details">
-    <div v-for="(item, index) in allProducts" :key="index" class="item">
-      <h3 class="family-name">{{ item.fmyMarketingName }}</h3>
-      <div v-for="(model, index) in item.modelList" :key="index">
-        <Model :model="model" />
-      </div>
+  <div v-if="clickedProduct && clickedProduct.length" class="products">
+    <div v-for="(item, index) in clickedProduct" :key="index" class="item">
+      <Model :model="item" />
     </div>
   </div>
 </template>
@@ -19,15 +16,15 @@ export default {
     Model,
   },
   computed: {
-    ...mapGetters(["allProducts"]),
+    ...mapGetters(["clickedProduct"]),
   },
 };
 </script>
 <style scoped>
-.product-details {
+.products {
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
-  padding: 2rem 3rem;
+  width: 40vw;
 }
 </style>

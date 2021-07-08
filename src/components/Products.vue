@@ -1,7 +1,9 @@
 <template>
   <div v-if="allProducts && allProducts.length" class="products">
     <div v-for="(item, index) in allProducts" :key="index" class="item">
-      <h4 class="family-name">{{ item.fmyMarketingName }}</h4>
+      <h4 class="family-name" @click="getProduct(index)">
+        {{ item.fmyMarketingName }}
+      </h4>
     </div>
   </div>
   <div v-else>Loading...</div>
@@ -21,6 +23,7 @@ export default {
   methods: {
     ...mapActions({
       getAllProducts: "getAllProducts",
+      getProduct: "getProduct",
     }),
   },
 };
@@ -38,7 +41,7 @@ img {
   flex-direction: column;
   background: #bbbaba8c;
   height: 100vh;
-  width: 37vw;
+  width: fit-content;
   padding-top: 1rem;
   border-radius: 0 1rem 1rem 0;
   box-shadow: 5px 0 5px rgba(218, 218, 218, 0.795);

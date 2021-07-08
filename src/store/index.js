@@ -9,10 +9,12 @@ const url =
 export default new Vuex.Store({
 	state: {
 		allProducts: [],
+		clickedProduct: [],
 		loading: false,
 	},
 	getters: {
 		allProducts: (state) => state.allProducts,
+		clickedProduct: (state) => state.clickedProduct,
 		loading: (state) => state.loading,
 	},
 	mutations: {
@@ -35,10 +37,20 @@ export default new Vuex.Store({
 					state.loading = false;
 				});
 		},
+		GET_PRODUCT(state, payload) {
+			state.clickedProduct = [];
+			state.allProducts[payload].modelList.map((item) => {
+				state.clickedProduct.push(item);
+			});
+			console.log('clickedProduct: ', state.clickedProduct);
+		},
 	},
 	actions: {
 		getAllProducts: ({ commit }) => {
 			commit('GET_ALL_PRODUCTS');
+		},
+		getProduct: ({ commit }, payload) => {
+			commit('GET_PRODUCT', payload);
 		},
 	},
 });
