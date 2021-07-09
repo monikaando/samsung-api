@@ -6,7 +6,7 @@
       </h5>
     </div>
   </div>
-  <div v-else class="spinner">
+  <div v-else-if="loading" class="spinner">
     <img
       src="https://res.cloudinary.com/mokaweb/image/upload/v1625777151/SamsungProducts/loading.gif"
       alt="loading"
@@ -23,7 +23,7 @@ export default {
     this.getAllProducts();
   },
   computed: {
-    ...mapGetters(["allProducts"]),
+    ...mapGetters(["allProducts", "loading"]),
   },
   methods: {
     ...mapActions({
@@ -60,7 +60,7 @@ export default {
 }
 .spinner {
   display: flex;
-  margin: 22% auto;
+  margin: 22rem auto;
 }
 .spinner img {
   width: 2rem;

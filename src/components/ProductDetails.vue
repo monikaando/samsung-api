@@ -54,6 +54,16 @@
       </div>
     </div>
   </div>
+  <div v-else-if="!loading" class="intro">
+    <img
+      src="https://res.cloudinary.com/mokaweb/image/upload/v1625863922/SamsungProducts/Intro_samsung.png"
+      alt="samsung-intro"
+    />
+    <h2>
+      Dit is de meest geavanceerde Galaxy Tab die nieuwe dimensies geeft aan
+      werken en spelen
+    </h2>
+  </div>
 </template>
 
 <script>
@@ -77,7 +87,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["clickedProduct"]),
+    ...mapGetters(["clickedProduct", "loading"]),
   },
 };
 </script>
@@ -169,5 +179,14 @@ button.color {
   border-width: 0.12rem;
   border-radius: 1rem;
   padding: 0.4rem 0.9rem;
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.intro img {
+  margin-bottom: 2rem;
 }
 </style>
