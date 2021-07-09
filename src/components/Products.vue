@@ -44,7 +44,7 @@ export default {
   width: fit-content;
   height: 98vh;
   padding-top: 1rem;
-  box-shadow: 5px 0 5px rgba(218, 218, 218, 0.795);
+  box-shadow: 0.3rem 0 0.3rem rgba(218, 218, 218, 0.795);
 }
 .item {
   padding: 1rem;

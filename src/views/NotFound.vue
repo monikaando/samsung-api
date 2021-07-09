@@ -31,19 +31,19 @@ img {
 button {
   padding: 0.25rem 1rem;
   margin: 5rem 0;
-  font-size: 16px;
+  font-size: 1.2rem;
   font-weight: 500;
-  border-radius: 6px;
-  border: 1px solid #06b4fd;
+  border-radius: 1.5rem;
+  border: 0.12rem solid #06b4fd;
   margin-left: 0.5rem;
-  height: 45px;
+  height: 3.2rem;
   background-color: #06b4fd;
   color: white;
 }
 button:hover {
   color: white;
   background-color: #535353;
-  border: 1px solid #535353;
+  border: 0.12rem solid #535353;
   cursor: pointer;
 }
 @media only screen and (max-width: 576px) {

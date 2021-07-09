@@ -33,7 +33,7 @@ p {
   color: #ffffff;
   margin: 0;
   padding: 0;
-  font-size: 12px;
+  font-size: 0.7rem;
 }
 a {
   color: #ffffff;

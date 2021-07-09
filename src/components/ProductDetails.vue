@@ -10,7 +10,6 @@
             <img :src="image" />
           </splide-slide>
         </splide>
-
         <div class="model-text">
           <p v-if="model.promotionPriceDisplay">
             <strong>{{ model.promotionPriceDisplay }} €</strong>
@@ -128,12 +127,12 @@ button.outline {
   z-index: 3;
   background: #38465f;
   color: white;
-  font-size: 14px;
+  font-size: 0.9rem;
   border-color: #38465f;
   border-style: solid;
-  border-width: 2px;
-  border-radius: 22px;
-  padding: 7px 15px;
+  border-width: 0.12rem;
+  border-radius: 1rem;
+  padding: 0.4rem 0.9rem;
   text-transform: uppercase;
   transition: all 0.2s linear;
 }
@@ -144,18 +143,18 @@ button.outline:hover {
   transition: all 0.2s linear;
 }
 button.outline:active {
-  border-radius: 22px;
+  border-radius: 1rem;
 }
 button.color {
   position: relative;
   z-index: 3;
   border-color: #070707;
   border-style: solid;
-  border-width: 1.5px;
-  border-radius: 20px;
-  padding: 10px;
-  height: 10px;
-  margin-left: 1.5rem;
+  border-width: 0.12rem;
+  border-radius: 1rem;
+  padding: 0.8rem;
+  height: 0.8rem;
+  margin-left: 1rem;
 }
 .colors {
   display: flex;
@@ -164,11 +163,11 @@ button.color {
 .memory {
   background: transparent;
   color: #070707;
-  font-size: 14px;
+  font-size: 0.9rem;
   border-color: #070707;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 22px;
-  padding: 7px 15px;
+  border-width: 0.12rem;
+  border-radius: 1rem;
+  padding: 0.4rem 0.9rem;
 }
 </style>
