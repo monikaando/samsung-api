@@ -2,7 +2,7 @@
   <div class="home">
     <div class="products">
       <Products />
-      <ProductDetails class="details" />
+      <ProductDetails class="prod-det" />
     </div>
     <Footer />
   </div>
@@ -30,7 +30,7 @@ export default {
 .products {
   display: flex;
 }
-.details {
+.prod-det {
   flex-grow: 1;
 }
 </style>

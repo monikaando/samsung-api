@@ -42,7 +42,6 @@ export default new Vuex.Store({
 			state.allProducts[payload].modelList.map((item) => {
 				state.clickedProduct.push(item);
 			});
-			console.log('clickedProduct: ', state.clickedProduct);
 		},
 	},
 	actions: {
