@@ -2,7 +2,15 @@
   <div v-if="clickedProduct && clickedProduct.length" class="product-details">
     <div v-for="(model, index) in clickedProduct" :key="index" class="item">
       <div class="model">
-        <img :src="model.thumbUrl" :alt="model.thumbUrlAlt" class="thumburl" />
+        <splide :options="options" class="carousel">
+          <splide-slide
+            v-for="(image, index) in model.galleryImage"
+            :key="index"
+          >
+            <img :src="image" />
+          </splide-slide>
+        </splide>
+
         <div class="model-text">
           <p v-if="model.promotionPriceDisplay">
             <strong>{{ model.promotionPriceDisplay }} €</strong>
@@ -21,7 +29,7 @@
                 :style="{ background: chip.fmyChipCode }"
               ></button>
             </div>
-            <button v-if="chip.fmyChipType === 'MOBILE MEMORY'" class="outline">
+            <button v-if="chip.fmyChipType === 'MOBILE MEMORY'" class="memory">
               {{ chip.fmyChipLocalName }}
             </button>
           </div>
@@ -33,14 +41,14 @@
           </ul>
           <div class="links">
             <a
-              :href="'https://www.samsung.com/' + model.reviewUrl"
-              target="_blank"
-              >Read reviews</a
-            >
-            <a
               :href="'https://www.samsung.com/' + model.originPdpUrl"
               target="_blank"
-              >Read more on Samsung website</a
+              ><button class="outline">Read more</button></a
+            >
+            <a
+              :href="'https://www.samsung.com/' + model.reviewUrl"
+              target="_blank"
+              ><button class="outline">Read reviews</button></a
             >
           </div>
         </div>
@@ -51,9 +59,24 @@
 
 <script>
 import { mapGetters } from "vuex";
+import { Splide, SplideSlide } from "@splidejs/vue-splide";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 
 export default {
   name: "Product",
+  components: {
+    Splide,
+    SplideSlide,
+  },
+  data() {
+    return {
+      options: {
+        rewind: true,
+        width: "20rem",
+        gap: "1rem",
+      },
+    };
+  },
   computed: {
     ...mapGetters(["clickedProduct"]),
   },
@@ -80,6 +103,10 @@ export default {
 .model-name {
   margin-top: 2rem;
 }
+
+.carousel img {
+  width: 20rem;
+}
 .details {
   margin-top: 2rem;
 }
@@ -99,10 +126,10 @@ ul {
 button.outline {
   position: relative;
   z-index: 3;
-  background: transparent;
-  color: #070707;
+  background: #38465f;
+  color: white;
   font-size: 14px;
-  border-color: #070707;
+  border-color: #38465f;
   border-style: solid;
   border-width: 2px;
   border-radius: 22px;
@@ -111,9 +138,9 @@ button.outline {
   transition: all 0.2s linear;
 }
 button.outline:hover {
-  color: white;
-  background: #070707;
-  border-color: #070707;
+  color: #38465f;
+  background: transparent;
+  border-color: #38465f;
   transition: all 0.2s linear;
 }
 button.outline:active {
@@ -133,5 +160,15 @@ button.color {
 .colors {
   display: flex;
   align-items: center;
+}
+.memory {
+  background: transparent;
+  color: #070707;
+  font-size: 14px;
+  border-color: #070707;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 22px;
+  padding: 7px 15px;
 }
 </style>
