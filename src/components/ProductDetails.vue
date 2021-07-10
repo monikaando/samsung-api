@@ -144,6 +144,7 @@ button.outline {
   padding: 0.4rem 0.9rem;
   text-transform: uppercase;
   transition: all 0.2s linear;
+  cursor: pointer;
 }
 button.outline:hover {
   color: #38465f;

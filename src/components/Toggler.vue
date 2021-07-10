@@ -26,5 +26,6 @@ export default {
 <style scoped>
 .burger-menu {
   margin: 1rem 0 0 1rem;
+  cursor: pointer;
 }
 </style>

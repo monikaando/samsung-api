@@ -55,10 +55,12 @@ export default {
 .close-icon {
   align-self: flex-end;
   margin-right: 1rem;
+  cursor: pointer;
 }
 .item {
   padding: 1rem;
   width: 12rem;
+  cursor: pointer;
 }
 .item:hover {
   background-color: rgba(151, 151, 151, 0.563);
