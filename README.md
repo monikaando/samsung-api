@@ -22,6 +22,8 @@
 <br><br>
 <img src="https://res.cloudinary.com/mokaweb/image/upload/c_scale,w_800/v1625929445/SamsungProducts/Samsung_API_D_3.png" />
 <br><br>
+<img src="https://res.cloudinary.com/mokaweb/image/upload/c_scale,w_800/v1625931314/SamsungProducts/Samsung_API_D_404.png" />
+<br><br>
 
 <b>Mobile version:</b>
 <br><br>
@@ -31,6 +33,8 @@
 <img src="https://res.cloudinary.com/mokaweb/image/upload/c_scale,w_200/v1625929445/SamsungProducts/Samsung_API_M_2.jpg" />
 <br><br>
 <img src="https://res.cloudinary.com/mokaweb/image/upload/c_scale,w_200/v1625929446/SamsungProducts/Samsung_API_M_3.jpg" />
+<br><br>
+<img src="https://res.cloudinary.com/mokaweb/image/upload/c_scale,w_200/v1625931314/SamsungProducts/Samsung_API_M_404.jpg" />
 <br><br>
 
 ## Setup
