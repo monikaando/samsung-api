@@ -112,7 +112,6 @@ export default {
 .model-name {
   margin-top: 2rem;
 }
-
 .carousel img {
   width: 20rem;
 }

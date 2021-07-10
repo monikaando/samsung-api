@@ -65,6 +65,7 @@ The view of Samsung tablets and phones
     6) For images  I used Cloudinary.
     7) For styling I used CSS.
     8) I added a favicon and the title for the website.
+    9) Normally .env shouldn't be on Github, although I publish it for a faster and smoother process of checking the assignment.
 
 ## Stack
 

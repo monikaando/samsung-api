@@ -29,12 +29,6 @@ export default {
   padding: 0;
   margin: 0;
 }
-p {
-  color: #ffffff;
-  margin: 0;
-  padding: 0;
-  font-size: 0.7rem;
-}
 a {
   color: #ffffff;
   text-decoration: none;
@@ -42,5 +36,11 @@ a {
 }
 a:hover {
   color: #ffffff;
+}
+p {
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-size: 0.7rem;
 }
 </style>
