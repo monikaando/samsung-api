@@ -14,6 +14,8 @@
 
 ## Visuals
 
+Click a <a href="https://youtu.be/yTUVD_6rKcs"><b>video</b></a> and see how the app works.
+
 <b>Desktop version:</b>
 <br><br>
 <img src="https://res.cloudinary.com/mokaweb/image/upload/c_scale,w_800/v1625929446/SamsungProducts/Samsung_API_D_1.png" />
