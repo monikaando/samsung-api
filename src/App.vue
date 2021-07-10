@@ -20,5 +20,7 @@ a:hover {
 }
 .svg-inline--fa {
   font-size: 1.5rem;
+  position: sticky;
+  top: 1rem;
 }
 </style>
