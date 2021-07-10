@@ -36,7 +36,9 @@
 ## Setup
 
 To run the application type in terminal:
+
 npm i
+
 npm run serve
 
 ## Technologies
