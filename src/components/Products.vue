@@ -1,5 +1,10 @@
 <template>
-  <div v-if="allProducts && allProducts.length" class="products">
+  <div
+    v-if="allProducts && allProducts.length"
+    class="products"
+    v-show="listOpen"
+  >
+    <font-awesome-icon icon="times" class="close-icon" @click="closeList" />
     <div v-for="(item, index) in allProducts" :key="index" class="item">
       <h5 class="family-name" @click="getProduct(index)">
         {{ item.fmyMarketingName }}
@@ -23,12 +28,13 @@ export default {
     this.getAllProducts();
   },
   computed: {
-    ...mapGetters(["allProducts", "loading"]),
+    ...mapGetters(["listOpen", "allProducts", "loading"]),
   },
   methods: {
     ...mapActions({
       getAllProducts: "getAllProducts",
       getProduct: "getProduct",
+      closeList: "closeList",
     }),
   },
 };
@@ -40,11 +46,15 @@ export default {
   display: flex;
   flex-direction: column;
   justify-items: center;
-  background: #bbbaba8c;
+  background: #cecece8c;
   width: fit-content;
   height: 98vh;
   padding-top: 1rem;
-  box-shadow: 0.3rem 0 0.3rem rgba(218, 218, 218, 0.795);
+  box-shadow: 0.2rem 0 0.2rem rgba(218, 218, 218, 0.575);
+}
+.close-icon {
+  align-self: flex-end;
+  margin-right: 1rem;
 }
 .item {
   padding: 1rem;
@@ -64,5 +74,13 @@ export default {
 }
 .spinner img {
   width: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  .products {
+    width: 100%;
+  }
+  .item {
+    padding: 0 0 0 0.5rem;
+  }
 }
 </style>

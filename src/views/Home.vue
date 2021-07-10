@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <div class="products">
+    <div class="prod">
+      <Toggler />
       <Products />
       <ProductDetails class="prod-det" />
     </div>
@@ -9,6 +10,7 @@
 </template>
 
 <script>
+import Toggler from "@/components/Toggler.vue";
 import Products from "@/components/Products.vue";
 import ProductDetails from "@/components/ProductDetails.vue";
 import Footer from "@/components/Footer.vue";
@@ -16,6 +18,7 @@ import Footer from "@/components/Footer.vue";
 export default {
   name: "Home",
   components: {
+    Toggler,
     Products,
     ProductDetails,
     Footer,
@@ -27,7 +30,7 @@ export default {
   display: flex;
   flex-direction: column;
 }
-.products {
+.prod {
   display: flex;
 }
 .prod-det {

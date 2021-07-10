@@ -54,7 +54,7 @@
       </div>
     </div>
   </div>
-  <div v-else-if="!loading" class="intro">
+  <div v-else-if="!loading" class="intro" v-show="listOpen == false">
     <img
       src="https://res.cloudinary.com/mokaweb/image/upload/v1625863922/SamsungProducts/Intro_samsung.png"
       alt="samsung-intro"
@@ -87,7 +87,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["clickedProduct", "loading"]),
+    ...mapGetters(["clickedProduct", "loading", "listOpen"]),
   },
 };
 </script>
@@ -181,6 +181,8 @@ button.color {
   padding: 0.4rem 0.9rem;
 }
 .intro {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -188,5 +190,16 @@ button.color {
 }
 .intro img {
   margin-bottom: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  .intro img {
+    width: 30rem;
+    margin-right: 4rem;
+  }
+  .intro h2 {
+    font-size: 1.3rem;
+    margin-right: 4rem;
+    text-align: center;
+  }
 }
 </style>

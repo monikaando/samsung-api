@@ -9,11 +9,13 @@ export default new Vuex.Store({
 	state: {
 		allProducts: [],
 		clickedProduct: [],
+		listOpen: false,
 		loading: false,
 	},
 	getters: {
 		allProducts: (state) => state.allProducts,
 		clickedProduct: (state) => state.clickedProduct,
+		listOpen: (state) => state.listOpen,
 		loading: (state) => state.loading,
 	},
 	mutations: {
@@ -42,6 +44,12 @@ export default new Vuex.Store({
 				state.clickedProduct.push(item);
 			});
 		},
+		OPEN_LIST(state) {
+			state.listOpen = true;
+		},
+		CLOSE_LIST(state) {
+			state.listOpen = false;
+		},
 	},
 	actions: {
 		getAllProducts: ({ commit }) => {
@@ -49,6 +57,12 @@ export default new Vuex.Store({
 		},
 		getProduct: ({ commit }, payload) => {
 			commit('GET_PRODUCT', payload);
+		},
+		openList: ({ commit }) => {
+			commit('OPEN_LIST');
+		},
+		closeList: ({ commit }) => {
+			commit('CLOSE_LIST');
 		},
 	},
 });

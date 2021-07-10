@@ -18,4 +18,7 @@ a {
 a:hover {
   color: #be4903;
 }
+.svg-inline--fa {
+  font-size: 1.5rem;
+}
 </style>
